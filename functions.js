@@ -19,19 +19,19 @@ if (planet.value.toLowerCase() == "kerbin")
 	gravity = 9.81;
 }
 
-var result = thrust.value / (mass.value * gravity);
+var result = thrust.value / (mass.value * gravity); // Tsiolkovsky's rocket equation
 label.innerHTML = result;
 
 if(result > 1)
 {
-	msg.innerHTML.fontcolor("green");
-	msg.innerHTML = capitalize(planet.value) + " Liftoff: true"; 
+	msg.innerHTML.fontcolor("green"); // not working, need to know why
+	msg.innerHTML = capitalize(planet.value) + " Liftoff: true";
 	
 	}
 else if(result < 1)
 {
 	msg.innerHTML = capitalize(planet.value) + " Liftoff: false"; 
-	msg.innetHTML.fontcolor("red");
+	msg.innetHTML.fontcolor("red"); // not working, need to know why
 }
 
 //alert('works');
